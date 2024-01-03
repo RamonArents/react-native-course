@@ -9,6 +9,7 @@ import {
   Pressable,
 } from "react-native";
 import { useState } from "react";
+import ApiCall from "./components/apicall";
 // view -> container that will wrap multiple components together
 
 export default function App() {
@@ -64,6 +65,9 @@ export default function App() {
           )}
         />
       </View>
+      <View style={styles.apiContainer}>
+        <ApiCall />
+      </View>
     </View>
   );
 }
@@ -84,7 +88,7 @@ const styles = StyleSheet.create({
   },
   listContainer: {
     paddingTop: 30,
-    flex: 3,
+    flex: 1,
   },
   listItem: {
     borderRadius: 1,
@@ -95,4 +99,7 @@ const styles = StyleSheet.create({
     color: "#fff",
     fontSize: 20,
   },
+  apiContainer : {
+    flex: 2,
+  }
 });
